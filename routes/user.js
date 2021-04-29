@@ -1,10 +1,10 @@
 const express = require("express");
-const User = require("../models/uer.model");
+const User = require("../models/user.model");
 
 const router = express.Router();
 router.route("/register").post((req,res)=>{
     console.log("In the register page");
-    const user = new user({
+    const user = new User({
         username:req.body.username,
         password:req.body.password,
         email:req.body.email,
